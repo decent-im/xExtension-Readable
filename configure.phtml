@@ -16,6 +16,7 @@
 
     <div>
 	<p>Shown below are the feeds, to which this addon will apply either Mercury or Readability Parsing. Remember to hit <b>Submit</b> at the bottom after making changes.</p>
+	<p> <strong>news.decent.im notice: Currently Readability is disabled due to performance considerations. Please contact the Operator via <a href="mailto:customer-support@autkin.net">customer-support@autkin.net</a> if Mercury isn't enough for you.</strong></p>
 	<?php
 		foreach ($this->getCategories() as $c) {
 	?>
@@ -29,7 +30,7 @@
 
 			<tr>
 			<td> <input type="checkbox" id="merc_<?php echo $f->id() ?>" name="merc_<?php echo $f->id() ?>" value="1" <?php echo $this->getConfStoreM($f->id()) ? 'checked' : ''; ?>> </td>
-			<td> <input type="checkbox" id="read_<?php echo $f->id() ?>" name="read_<?php echo $f->id() ?>" value="1" <?php echo $this->getConfStoreR($f->id()) ? 'checked' : ''; ?> disabled> </td> <!-- Currently disabled due to performance considerations. Contact customer-support@autkin.net if you need this. -->
+			<td> <input type="checkbox" id="read_<?php echo $f->id() ?>" name="read_<?php echo $f->id() ?>" value="1" <?php echo $this->getConfStoreR($f->id()) ? 'checked' : ''; ?> disabled title="Disabled due to performance. Contact Operator."> </td>
 	    		<td><?php echo $f->name() ?></td>
 			</tr>
 		
