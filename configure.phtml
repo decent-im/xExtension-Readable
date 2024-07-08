@@ -29,7 +29,7 @@
 
 			<tr>
 			<td> <input type="checkbox" id="merc_<?php echo $f->id() ?>" name="merc_<?php echo $f->id() ?>" value="1" <?php echo $this->getConfStoreM($f->id()) ? 'checked' : ''; ?>> </td>
-			<td> <input type="checkbox" id="read_<?php echo $f->id() ?>" name="read_<?php echo $f->id() ?>" value="1" <?php echo $this->getConfStoreR($f->id()) ? 'checked' : ''; ?>> </td>
+			<td> <input type="checkbox" id="read_<?php echo $f->id() ?>" name="read_<?php echo $f->id() ?>" value="1" <?php echo $this->getConfStoreR($f->id()) ? 'checked' : ''; ?> disabled> </td> <!-- Currently disabled due to performance considerations. Contact customer-support@autkin.net if you need this. -->
 	    		<td><?php echo $f->name() ?></td>
 			</tr>
 		
