@@ -86,9 +86,13 @@ class ReadableExtension extends Minz_Extension {
 
         if (FreshRSS_Context::$user_conf->read_ext_read_host != '') {
             $this->readHost = FreshRSS_Context::$user_conf->read_ext_read_host;
+        } else {
+            $this->readHost = 'http://read:3000';
         }
         if (FreshRSS_Context::$user_conf->read_ext_merc_host != '') {
             $this->mercHost = FreshRSS_Context::$user_conf->read_ext_merc_host;
+        } else {
+            $this->mercHost = 'http://merc:3000';
         }
         if (FreshRSS_Context::$user_conf->read_ext_mercury != '') {
             $this->mStore = json_decode(FreshRSS_Context::$user_conf->read_ext_mercury, true);
